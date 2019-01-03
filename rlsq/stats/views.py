@@ -6,3 +6,6 @@ def home(request):
 
 def playerstats(request):
     return render(request, 'stats/playerstats.html')
+
+def top100(request):
+    return render(request, 'stats/top100.html')
