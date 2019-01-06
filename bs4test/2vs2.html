@@ -1,0 +1,2543 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+        
+    Rocket League Rating Leaderboards: all Leaderboards - Rating
+
+    </title>
+<meta name="apple-itunes-app" content="app-id=1287696482">
+<meta name="google-play-app" content="app-id=network.tracker.app">
+<meta name="description" content="Rocket League Rating (MMMR) Leaderboards.  You can filter by console or region." />
+<meta name="google-site-verification" content="0GyFaQVueA56vG7WSwmFP4fcVfUwA2KVUiczOTKkgIw" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/Content/bundled.min.css?cache=abc@SiteSettings.BootTime.Ticks" rel="stylesheet" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+<style type="text/css">
+        
+
+        .ad-size {
+                width: 728px; height: 90px;
+                margin: auto;
+        }
+         .ad-size-box {
+                width: 728px; height: 90px;
+                margin: auto;
+        }
+        @media(min-width:900px) {
+            .ad-big {
+                width: 300px; height: 600px;
+            }
+        }
+        @media(max-width:900px) {
+            .ad-size {
+                width: 320px; height: 100px;
+            }
+             .ad-size-box {
+                width: 300px; height: 250px;
+            }
+        }
+        .side-ad { display: none; }
+
+        @media(min-width: 1600px) {
+            .side-ad {
+                display:block;
+                position:absolute;
+                top:215px;
+            }
+        }
+    </style>
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/rl/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/rl/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/rl/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/rl/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/rl/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/rl/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/rl/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/rl/favicon/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="/images/rl/favicon/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="/images/rl/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/images/rl/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/images/rl/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/images/rl/favicon/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="Rocket League Tracker" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+<meta property="og:image" content="http://ogimage.thetrackernetwork.com/?width=1200&height=900&url=http://rocketleague.tracker.network/ranked-leaderboards/all/11?page=1" />
+<meta name="author" content="Tracker Network">
+<meta name="robots" content="index, follow">
+<script src="//tags-cdn.deployads.com/a/rocketleague.tracker.network.js" async></script>
+</head>
+<body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+        window.device = 'mobile';
+        window.username = 'False';
+
+        if (window.matchMedia !== undefined && window.matchMedia("(min-width: 1000px)").matches) {
+            window.device = 'desktop';
+        }
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-42280104-16', 'auto');
+        ga('set', 'anonymizeIp', true);
+
+        if (typeof (ga_url_override) == 'undefined') {
+            ga('send', 'pageview');
+        } else {
+            ga('send', 'pageview', ga_url_override);
+        }      
+
+        ga('create', 'UA-42280104-4', 'auto', { 'name': 'agg' });
+        ga('agg.set', 'anonymizeIp', true);
+        ga('agg.send', 'pageview');
+    </script>
+<script>
+        var trnHeader = {};
+
+        trnHeader.searchSubmit = function (name, platform) {
+            if (localStorage != null) {
+                var recent = localStorage.getItem('recentv2') || '';
+                var arr = recent != '' ? JSON.parse(recent) : [];
+
+                if (arr.filter(function (e) { return e.name == name && e.console == platform; }).length == 0) {
+                    arr.push({ console: platform, name: name });
+                    if (arr.length > 7) {
+                        arr = arr.reverse().filter(function (e, i) { return i <= 6 }).reverse();
+                    }
+
+                    localStorage.setItem('recentv2', JSON.stringify(arr));
+                }
+            }
+            if (platform == 1) {
+                window.location.href = '/profile/xbox/' + name;
+            } else if (platform == 2) {
+                window.location.href = '/profile/ps/' + name;
+            } else if (platform == 3) {
+                window.location.href = '/profile/steam/' + name;
+            }
+        }
+
+        trnHeader.recentHtmlFormat = function (platform) {
+            if (platform == 1) {
+                return '<li class="suggestion-item"><a href="/profile/xbox/{0}"><i class="ion {1}"></i> {2}</a></li>';
+            } else if (platform == 2) {
+                return '<li class="suggestion-item"><a href="/profile/ps/{0}"><i class="ion {1}"></i> {2}</a></li>';
+            } else if (platform == 3) {
+                return '<li class="suggestion-item"><a href="/profile/steam/{0}"><i class="ion {1}"></i> {2}</a></li>';
+            }
+             
+        }
+    </script>
+<header class="trn-header at-top" id="trn-header" data-controller="Stats" data-action="RankedLeaderboards">
+<div class="top-bar">
+<div class="branding">
+<div class="logo">
+<a href="/">
+<img src="/Images/General/logo.png" alt="TRN Logo" />
+</a>
+</div>
+<div class="title">
+<a class="site-name" href="/">Rocket League</a>
+<span class="trn-name">Tracker Network</span>
+</div>
+</div>
+<div class="search" id="trn-search">
+<div class="search-box">
+<div class="search-icon">
+<i class="ion ion-android-search"></i>
+</div>
+<input class="search-field" type="text" placeholder="Search" id="trn-searchfield" />
+<div class="search-platforms">
+<i class="search-platform ion ion-social-windows" data-platform="3" data-color="#00AEF0"></i>
+<i class="search-platform ion ion-playstation" data-platform="2" data-color="#003791"></i>
+<i class="search-platform ion ion-xbox active" data-platform="1" data-color="#107c10"></i>
+</div>
+</div>
+<div class="suggestion-list">
+<span class="suggestion-label">Recent Players</span>
+<ul id="suggestion-list"></ul>
+</div>
+</div>
+<div class="tools">
+<div class="tools-menu network-menu has-submenu">
+<a href="#" onclick="return false;" class="submenu-btn">
+<i class="ion ion-grid"></i>
+</a>
+<div class="submenu">
+<div class="sites">
+<a href="http://destinytracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/destiny.png" />
+<span class="site-name">Destiny <br />Tracker</span>
+</a>
+<a href="http://overwatchtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/overwatch.png" />
+<span class="site-name">Overwatch <br />Tracker</span>
+</a>
+<a href="http://battlefieldtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/battlefield-1.jpg" />
+<span class="site-name">Battlefield <br />Tracker</span>
+</a>
+<a href="http://halotracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/halo-5.png" />
+<span class="site-name">Halo <br />Tracker</span>
+</a>
+<a href="http://divisiontracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/the-division.png" />
+<span class="site-name">The Division <br />Tracker</span>
+</a>
+<a href="http://csgo.tracker.network/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/csgo.png" />
+<span class="site-name">CS:GO <br />Tracker</span>
+</a>
+<a href="http://fhtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/for-honor.jpg" />
+<span class="site-name">For Honor <br />Tracker</span>
+</a>
+<a href="http://pubgtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/pubg.jpg" />
+<span class="site-name">PUBG <br />Tracker</span>
+</a>
+<a href="http://r6.tracker.network/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/DB22rainbow6.jpg" />
+<span class="site-name">Rainbow 6 Siege <br />Tracker</span>
+</a>
+<a href="http://fortnitetracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/3F0Cfortnite.jpg" />
+<span class="site-name">Fortnite <br />Tracker</span>
+</a>
+<a href="http://cod.tracker.gg/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/739Dboxart.png" />
+<span class="site-name">Call of Duty <br />Tracker</span>
+</a>
+</div>
+<a href="https://tracker.network" class="more-link">More</a>
+</div>
+</div>
+<div class="tools-menu">
+<a href="https://thetrackernetwork.com/auth/login?domain=rocketleague.tracker.network&amp;secure=false&amp;returnUrl=/ranked-leaderboards/all/11?page=1">
+<i class="ion ion-person"></i>
+<span class="text">Login / Register</span>
+</a>
+</div>
+</div>
+</div>
+<nav class="navigation-bar">
+<ul class="main-menu">
+<li class="">
+<a href="/">Home</a>
+</li>
+<li class="">
+<a href="/live">Live Tracker</a>
+</li>
+<li class="">
+<a href="/lfg" style="color:gold;">LFG </a>
+</li>
+<li class="has-submenu active">
+<a href="#" onclick="return false;" class="submenu-btn">Leaderboards <i class="ion ion-android-arrow-dropdown"></i></a>
+<div class="submenu-container" id="lb">
+<ul class="submenu">
+<li>
+<a href="/ranked-leaderboards/all/11?page=1">Skill Rating Leaderboards</a>
+</li>
+<li>
+<a href="/leaderboards/all">Leaderboards</a>
+</li>
+<li>
+<a href="/leaderboards/xbox">Xbox Leaderboards</a>
+</li>
+<li>
+<a href="/leaderboards/ps">PS4 Leaderboards</a>
+</li>
+<li>
+<a href="/leaderboards/steam">Steam Leaderboards</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="">
+<a href="/teams">Clans</a>
+</li>
+<li class="has-submenu ">
+<a href="#" onclick="return false;" class="submenu-btn">Population Stats <i class="ion ion-android-arrow-dropdown"></i></a>
+<div class="submenu-container" id="population-stats">
+<ul class="submenu">
+<li>
+<a href="/distribution">Skill Rating Distribution</a>
+</li>
+<li>
+<a href="/population">Global Stats</a>
+</li>
+<li>
+<a href="/tracked-players">RL Tracker Stats</a>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/premium?utm_source=menu&utm_campaign=GO PREMIUM" style="color: #FFCA28; font-weight: bold;">GO PREMIUM</a>
+</li>
+</ul>
+</nav>
+</header>
+<script src="/Scripts/TRN-Header.js"></script>
+<div class="container container-body">
+</div>
+<div class="container content-container">
+<div style="min-height: 730px;">
+<div id="recent-players-list">
+<div style="width: 55px; margin-right: 10px;">Recent: </div>
+</div>
+<div class="ad-box" style="margin-bottom: 20px;">
+<div class="upsell">
+<div>
+<a href="/premium?utm_source=banner&utm_campaign=support">Support</a> the site!
+ </div>
+<div>
+<a href="/supporter?utm_source=banner&utm_campaign=Learn More" class="btn btn-learnmore btn-sm">Learn More</a>
+<a href="/supporter?utm_source=banner&utm_campaign=Donate" class="btn btn-primary btn-sm">Donate</a>
+</div>
+</div>
+<div class="ad">
+<div style="width:100%;margin-bottom:15px;">
+<script src="//tags-cdn.deployads.com/a/rocketleague.tracker.network.js" async></script>
+<script>
+                                if (window.device == 'mobile') {
+                                    document.write('<div class="ad-tag" data-ad-name="RL-Header ATF 320x50" data-ad-size="320x50"></div>');
+                                }
+                                else {
+                                    document.write('<div class="ad-tag" data-ad-name="RL-Header ATF 728x90" data-ad-size="728x90" data-ad-refresh="time 90s"></div>');
+                                }
+                                (deployads = window.deployads || []).push({});
+                            </script>
+<div id="top-supportsite" style="width: 100%; text-align: center;height: 100%;display:none;">
+<i class="fa fa-smile-o fa-1x hidden-xs hidden-sm" style="margin-top: 6px; color:#3f69d7"></i>
+<div style="margin: 0px auto; width: 80%; color:#888; margin-top: 10px; margin-bottom:10px; font-size: 10pt; line-height: 1.5em;">
+Please consider adding Rocket League Tracker to your adblock whitelist! Our ads support the development and hardware costs of running this site. Really hate ads? Become a <a href="/supporter">premium user.</a>
+</div>
+</div><div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div id="side-ad-parent" class="side-ad">
+<script type="text/javascript">
+        if (window.location.pathname != '/live') {
+            if (window.matchMedia !== undefined && window.matchMedia("(min-width: 1900px)").matches) {
+
+                window.addEventListener('resize', function () {
+                    document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+                }, true);
+
+
+                document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+
+                //document.write('<div class="ad-tag" data-ad-name="SideBar 300x600" data-ad-size="300x600" ></div>');
+
+                document.write('<div class="ad-tag" data-ad-name="RL-300x600ATFrefreshSPLIT-A" data-ad-size="300x600" data-ad-refresh="time 90s" data-ad-sticky="sidebar 60px"></div>');
+
+            } else if (window.matchMedia !== undefined && window.matchMedia("(min-width: 1600px)").matches) {
+
+                window.addEventListener('resize', function () {
+                    document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+                }, true);
+
+                document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+
+                document.write('<div class="ad-tag" data-ad-name="RL-SideBar 160x600" data-ad-size="160x600" data-ad-refresh="time 90s" data-ad-sticky="sidebar 60px"></div>');
+            }
+        }
+       
+
+    </script>
+<script src="//tags-cdn.deployads.com/a/rocketleague.tracker.network.js" async></script>
+<script>(deployads = window.deployads || []).push({});</script>
+</div>
+<link href="/Content/RocketLeague/pages/Leaderboard.min.css" rel="stylesheet" />
+<style type="text/css">
+    .emblem {
+        width: 20px;
+    }
+
+    .top3 td .trueskill {
+        width: 40px;
+    }
+
+    .trueskill {
+        width: 35px;
+    }
+
+    .top3 td {
+        line-height: 300%;
+        vertical-align: middle;
+        font-size: 150%;
+    }
+
+    .flag {
+        margin-top: 5px;
+    }
+
+    .form-control {
+        height: 35px !important;
+    }
+    .ion-social-twitch {
+        color: #6441A4;
+    }
+</style>
+<div class="alert alert-warning">
+Register / Login to Join our Regional Leaderboards!
+</div>
+<div class="trn-container">
+<h1>Rocket League Rating Leaderboards</h1>
+<div class="row">
+<div class="col-md-4">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="panel-title">Leaderboard</h3>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label class="Platform">Select Platform</label>
+<select class="form-control" id="Platform" name="Platform">
+<option value="all" selected>All</option>
+<option value="xbox">Xbox One</option>
+<option value="ps">Playstation</option>
+<option value="steam">Steam</option>
+</select>
+<label class="Playlist">Select Playlist</label>
+<select class="form-control" id="Playlist" name="Playlist">
+<option value="0">Un-Ranked</option>
+<option value="10">Ranked Duel 1v1</option>
+<option value="11" selected="selected">Ranked Doubles 2v2</option>
+<option value="12">Ranked Solo Standard 3v3</option>
+<option value="13">Ranked Standard 3v3</option>
+<option value="27">Hoops</option>
+<option value="28">Rumble</option>
+<option value="29">Dropshot</option>
+<option value="30">Snowday</option>
+</select>
+<label class="Playlist">Ranked On</label>
+<input type="text" readonly="readonly" class="form-control" value="Rating" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="panel-title">Filters</h3>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label>Country</label>
+<select class="form-control filter" id="Country" name="Country"><option value="Select Country">Select Country</option>
+<option selected="selected"></option>
+<option value="Ã…land Islands">&#195;…land Islands</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Brazil">Brazil</option>
+<option value="Brunei">Brunei</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Canada">Canada</option>
+<option value="Caribbean Netherlands">Caribbean Netherlands</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Colombia">Colombia</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Croatia">Croatia</option>
+<option value="CuraÃ§ao">Cura&#195;&#167;ao</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czechia">Czechia</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Estonia">Estonia</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="Gabon">Gabon</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guernsey">Guernsey</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Iran">Iran</option>
+<option value="Iraq">Iraq</option>
+<option value="Ireland">Ireland</option>
+<option value="Isle of Man">Isle of Man</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jersey">Jersey</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kosovo">Kosovo</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Libya">Libya</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macau">Macau</option>
+<option value="Macedonia (FYROM)">Macedonia (FYROM)</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Maldives">Maldives</option>
+<option value="Malta">Malta</option>
+<option value="Martinique">Martinique</option>
+<option value="Mexico">Mexico</option>
+<option value="Moldova">Moldova</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montenegro">Montenegro</option>
+<option value="Morocco">Morocco</option>
+<option value="Myanmar (Burma)">Myanmar (Burma)</option>
+<option value="Namibia">Namibia</option>
+<option value="Nederland">Nederland</option>
+<option value="Nepal">Nepal</option>
+<option value="Netherlands">Netherlands</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="North Korea">North Korea</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palestine">Palestine</option>
+<option value="Panama">Panama</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Philippines">Philippines</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="RÃ©union">R&#195;&#169;union</option>
+<option value="República Federativa do Brasil">Rep&#250;blica Federativa do Brasil</option>
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+<option value="Russia">Russia</option>
+<option value="SÃ£o TomÃ© and PrÃ­ncipe">S&#195;&#163;o Tom&#195;&#169; and Pr&#195;&#173;ncipe</option>
+<option value="Saint BarthÃ©lemy">Saint Barth&#195;&#169;lemy</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+<option value="San Marino">San Marino</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Serbia">Serbia</option>
+<option value="Singapore">Singapore</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Somalia">Somalia</option>
+<option value="South Africa">South Africa</option>
+<option value="South Korea">South Korea</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Suriname">Suriname</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syria">Syria</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tanzania">Tanzania</option>
+<option value="Thailand">Thailand</option>
+<option value="The Bahamas">The Bahamas</option>
+<option value="The Netherlands">The Netherlands</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+<option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="United States">United States</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Yemen">Yemen</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option>
+</select>
+</div>
+<div class="form-group">
+<label>State</label>
+<select class="form-control filter" id="State" name="State"><option value="Select State">Select State</option>
+</select>
+</div>
+<div class="form-group">
+<label>City</label>
+<select class="form-control filter" id="City" name="City"><option value="Select City">Select City</option>
+</select>
+</div>
+<br />
+<a href="https://thetrackernetwork.com/Manage/Geo?domain=rocketleague.tracker.network" class="btn btn-warning btn-block"><i class="fa fa-map-marker"></i> Join Regional Leaderboards</a>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top:10px;width:100%;" class="ad-big">
+<div style="margin: auto;">
+<div id="f4d01d9f-b1c0-46da-9f12-dbc4948efc78" style="width:100%;text-align: center;">
+<script src="//tags-cdn.deployads.com/a/rocketleague.tracker.network.js" async></script>
+<script>
+    	if (window.matchMedia !== undefined && window.matchMedia("(max-width: 1599px)").matches) {
+    	    document.write('<div class="ad-tag" data-ad-name="RL-Content Box 2 300x250" data-ad-size="300x250" data-ad-refresh="time 90s"></div>');
+	}
+
+    	(deployads = window.deployads || []).push({});
+        </script>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="row">
+<div class="col-xs-12">
+<div class="card-heading">
+<h3 class="card-title"><i class="ion-refresh"></i> Next Update</h3>
+</div>
+<div class="card">
+<div class="card-body">
+Leaderboards refresh in <strong>51s</strong>. Last Updated <span data-livestamp="2019-01-06T06:00:56.584Z"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="well well-sm clearfix nomargin">
+<div class="pull-left">
+<h4>
+</h4>
+</div>
+<div class="pull-right" style="margin-top: 8px;">
+<a id="prev-page" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i> Previous Page</a>
+<a id="next-page" class="btn btn-primary btn-sm">Next Page <i class="fa fa-arrow-right"></i></a>
+</div>
+</div>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>Rank</th>
+<th>Gamer</th>
+<th>Rating</th>
+<th>Games</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="99" style="text-align:center;" class="me">
+<a href="https://thetrackernetwork.com/auth/login?domain=rocketleague.tracker.network&secure=false&lb=1">Login</a> or <a href="https://thetrackernetwork.com/Auth/register?domain=rocketleague.tracker.network&lb=1">Register</a> to see your Leaderboard position here
+</td>
+</tr>
+<tr class="top3">
+<td>1</td>
+<td>
+<a name="1"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198213713880">Fairy Peak! | Mock-it</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,203
+</div>
+</td>
+<td>
+949 </td>
+</tr>
+<tr class="top3">
+<td>2</td>
+<td>
+<a name="2"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198353133370">Alpha54</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,101
+</div>
+</td>
+<td>
+954 </td>
+</tr>
+<tr class="top3">
+<td>3</td>
+<td>
+<a name="3"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198823985212">M0nkey (New to PC)</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,084
+</div>
+</td>
+<td>
+515 </td>
+</tr>
+<tr class="">
+<td>4</td>
+<td>
+<a name="4"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198085868465">Lethamyr</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,083
+</div>
+</td>
+<td>
+507 </td>
+</tr>
+<tr class="">
+<td>5</td>
+<td>
+<a name="5"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198105072499">AyyJayy</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,081
+</div>
+</td>
+<td>
+932 </td>
+</tr>
+<tr class="">
+<td>6</td>
+<td>
+<a name="6"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198307356688">BLZ MaRc_By_8.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Spain.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,079
+</div>
+</td>
+<td>
+478 </td>
+</tr>
+<tr class="">
+<td>7</td>
+<td>
+<a name="7"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198258911562">Mijo.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,061
+</div>
+</td>
+<td>
+873 </td>
+</tr>
+<tr class="">
+<td>8</td>
+<td>
+<a name="8"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561197992682099">CorruptedG</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,059
+</div>
+</td>
+<td>
+636 </td>
+</tr>
+<tr class="">
+<td>9</td>
+<td>
+<a name="9"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198237161718">Roll Dizz</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,054
+</div>
+</td>
+<td>
+1209 </td>
+</tr>
+<tr class="">
+<td>10</td>
+<td>
+<a name="10"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198299709908">jstn.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,047
+</div>
+</td>
+<td>
+305 </td>
+</tr>
+<tr class="">
+<td>11</td>
+<td>
+<a name="11"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198118155495">taroco</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,038
+</div>
+</td>
+<td>
+1098 </td>
+</tr>
+<tr class="">
+<td>12</td>
+<td>
+<a name="12"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198076736523">G2 Kronovi ^-^</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,027
+</div>
+</td>
+<td>
+325 </td>
+</tr>
+<tr class="">
+<td>12</td>
+<td>
+<a name="12"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198073484045">memowee</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,027
+</div>
+</td>
+<td>
+159 </td>
+</tr>
+<tr class="">
+<td>12</td>
+<td>
+<a name="12"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198330776815">Rizual</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,027
+</div>
+</td>
+<td>
+403 </td>
+</tr>
+<tr class="">
+<td>15</td>
+<td>
+<a name="15"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198043445470">Jacob</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,025
+</div>
+</td>
+<td>
+736 </td>
+</tr>
+<tr class="">
+<td>16</td>
+<td>
+<a name="16"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198262407066">Zaphare</a>
+<a href="https://twitch.tv/Zaphare" class="btn btn-sm twitch"><i class="ion-social-twitch"></i></a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Switzerland.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,022
+</div>
+</td>
+<td>
+457 </td>
+</tr>
+<tr class="">
+<td>17</td>
+<td>
+<a name="17"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198374703623">Yukeo</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Austria.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,021
+</div>
+</td>
+<td>
+984 </td>
+</tr>
+<tr class="">
+<td>18</td>
+<td>
+<a name="18"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198183899729">Chausette45</a>
+ <i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,017
+</div>
+</td>
+<td>
+340 </td>
+</tr>
+<tr class="">
+<td>19</td>
+<td>
+<a name="19"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198404180097">Speed</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,009
+</div>
+</td>
+<td>
+514 </td>
+</tr>
+<tr class="">
+<td>19</td>
+<td>
+<a name="19"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198305338233">AztraL</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,009
+</div>
+</td>
+<td>
+816 </td>
+</tr>
+<tr class="">
+<td>21</td>
+<td>
+<a name="21"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198002115922">P0wrnflakes</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,008
+</div>
+</td>
+<td>
+591 </td>
+</tr>
+<tr class="">
+<td>22</td>
+<td>
+<a name="22"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198030080604">Maestro</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,007
+</div>
+</td>
+<td>
+645 </td>
+</tr>
+<tr class="">
+<td>23</td>
+<td>
+<a name="23"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198246237074">Doomayn</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,006
+</div>
+</td>
+<td>
+547 </td>
+</tr>
+<tr class="">
+<td>23</td>
+<td>
+<a name="23"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198139392729">Yukiss</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/France.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,006
+</div>
+</td>
+<td>
+545 </td>
+</tr>
+<tr class="">
+<td>25</td>
+<td>
+<a name="25"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198149461762">Satthew</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,005
+</div>
+</td>
+<td>
+674 </td>
+</tr>
+<tr class="">
+<td>26</td>
+<td>
+<a name="26"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198852044287">x)</a>
+
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,004
+</div>
+</td>
+<td>
+189 </td>
+</tr>
+<tr class="">
+<td>27</td>
+<td>
+<a name="27"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198325538510">SweatYMiX</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Finland.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,003
+</div>
+</td>
+<td>
+848 </td>
+</tr>
+<tr class="">
+<td>27</td>
+<td>
+<a name="27"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198192316061">MaJicBear</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,003
+</div>
+</td>
+<td>
+697 </td>
+</tr>
+<tr class="">
+<td>29</td>
+<td>
+<a name="29"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198449837519">Dezzy.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,002
+</div>
+</td>
+<td>
+219 </td>
+</tr>
+<tr class="">
+<td>29</td>
+<td>
+<a name="29"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561197982373286">Yagi.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Switzerland.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,002
+</div>
+</td>
+<td>
+862 </td>
+</tr>
+<tr class="">
+<td>29</td>
+<td>
+<a name="29"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198340137769">ThO.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,002
+</div>
+</td>
+<td>
+338 </td>
+</tr>
+<tr class="">
+<td>32</td>
+<td>
+<a name="32"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/ps/tazz963">tazz963</a>
+<i class="emblem pull-right hidden-xs ion-playstation" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,001
+</div>
+</td>
+<td>
+231 </td>
+</tr>
+<tr class="">
+<td>32</td>
+<td>
+<a name="32"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198090715652">Bluey</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,001
+</div>
+</td>
+<td>
+358 </td>
+</tr>
+<tr class="">
+<td>34</td>
+<td>
+ <a name="34"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198071457340">Ferra</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,000
+</div>
+</td>
+<td>
+749 </td>
+</tr>
+<tr>
+<td colspan="4" style="text-align: center;">
+<div style="width:100%;text-align:center;">
+<script src="//tags-cdn.deployads.com/a/rocketleague.tracker.network.js" async></script>
+<script>
+        if (window.device == 'mobile') {
+            document.write('<div class="ad-tag" data-ad-name="RL-Content Box 300x250" data-ad-size="300x250"></div>');
+        }
+        else {
+            document.write('<div class="ad-tag" data-ad-name="RL-Content Banner 728x90" data-ad-size="728x90" data-ad-refresh="time 90s"></div>');
+        }
+        (deployads = window.deployads || []).push({});
+        </script>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>34</td>
+<td>
+<a name="34"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198843262824">archie.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+2,000
+</div>
+</td>
+<td>
+932 </td>
+</tr>
+<tr class="">
+<td>36</td>
+<td>
+<a name="36"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198854247216">Emre</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,997
+</div>
+</td>
+<td>
+742 </td>
+</tr>
+<tr class="">
+<td>37</td>
+<td>
+<a name="37"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198421414732">mectos</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,992
+</div>
+</td>
+<td>
+486 </td>
+</tr>
+<tr class="">
+<td>38</td>
+<td>
+<a name="38"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198353125160">FlamE</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,991
+</div>
+</td>
+<td>
+361 </td>
+</tr>
+<tr class="">
+<td>39</td>
+<td>
+<a name="39"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198849667215">KIRITO</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-0.png" style="width: 25px;" />
+1,989
+</div>
+</td>
+<td>
+8 </td>
+</tr>
+<tr class="">
+<td>40</td>
+<td>
+<a name="40"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198425563369">MassMACHINE45.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,987
+</div>
+</td>
+<td>
+1440 </td>
+</tr>
+<tr class="">
+<td>41</td>
+<td>
+<a name="41"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198412918093">airpods lft</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,986
+</div>
+</td>
+<td>
+383 </td>
+</tr>
+<tr class="">
+<td>42</td>
+<td>
+<a name="42"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198369498607">Mikeboy</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,982
+</div>
+</td>
+<td>
+705 </td>
+</tr>
+<tr class="">
+<td>43</td>
+<td>
+<a name="43"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198361446159">arju. back 24/08</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Italy.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,980
+</div>
+</td>
+<td>
+465 </td>
+</tr>
+<tr class="">
+<td>44</td>
+<td>
+<a name="44"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198061585314">G2 JKnaps</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Canada.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,978
+</div>
+</td>
+<td>
+227 </td>
+</tr>
+<tr class="">
+<td>45</td>
+<td>
+<a name="45"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198018922320">Al Dente</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,976
+</div>
+</td>
+<td>
+425 </td>
+</tr>
+<tr class="">
+<td>46</td>
+<td>
+<a name="46"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198286157265">...</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,974
+</div>
+</td>
+<td>
+245 </td>
+</tr>
+<tr class="">
+<td>47</td>
+<td>
+<a name="47"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198067659334">Kaydop</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,972
+</div>
+</td>
+<td>
+835 </td>
+</tr>
+<tr class="">
+<td>48</td>
+<td>
+<a name="48"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198446567626">oKhaliD</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,968
+</div>
+</td>
+<td>
+737 </td>
+</tr>
+<tr class="">
+<td>49</td>
+<td>
+<a name="49"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198323843523">Sypical</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,966
+</div>
+</td>
+<td>
+966 </td>
+</tr>
+<tr class="">
+<td>50</td>
+<td>
+<a name="50"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198344646153">Dr.Frustated</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,964
+</div>
+</td>
+<td>
+161 </td>
+</tr>
+<tr class="">
+<td>51</td>
+<td>
+<a name="51"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198441123172">isharrieff</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,963
+</div>
+</td>
+<td>
+558 </td>
+</tr>
+<tr class="">
+<td>51</td>
+<td>
+<a name="51"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198208018835">Lauty</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,963
+</div>
+</td>
+<td>
+468 </td>
+</tr>
+<tr class="">
+<td>51</td>
+<td>
+<a name="51"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198354750319">Astroh</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,963
+</div>
+</td>
+<td>
+435 </td>
+</tr>
+<tr class="">
+<td>51</td>
+<td>
+<a name="51"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198311129338">Borito B</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,963
+</div>
+</td>
+<td>
+379 </td>
+</tr>
+<tr class="">
+<td>51</td>
+<td>
+<a name="51"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198063473656">GCR710</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Spain.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,963
+</div>
+</td>
+<td>
+495 </td>
+</tr>
+<tr class="">
+<td>56</td>
+<td>
+<a name="56"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198414115967">VorTeX</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Sweden.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,962
+</div>
+</td>
+<td>
+498 </td>
+</tr>
+<tr class="">
+<td>57</td>
+<td>
+<a name="57"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198271971450">nV Deevo</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,961
+</div>
+</td>
+<td>
+379 </td>
+</tr>
+<tr class="">
+<td>58</td>
+<td>
+<a name="58"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198337823156">wand555</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,960
+</div>
+</td>
+<td>
+419 </td>
+</tr>
+<tr class="">
+<td>59</td>
+<td>
+<a name="59"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198387068637">Extra</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,954
+</div>
+</td>
+<td>
+480 </td>
+</tr>
+<tr class="">
+<td>59</td>
+<td>
+<a name="59"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198327846028">firstkiller.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,954
+</div>
+</td>
+<td>
+861 </td>
+</tr>
+<tr class="">
+<td>61</td>
+<td>
+ <a name="61"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198072970081">Mognus</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,953
+</div>
+</td>
+<td>
+212 </td>
+</tr>
+<tr class="">
+<td>62</td>
+<td>
+<a name="62"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198410496942">Zeldris</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,951
+</div>
+</td>
+<td>
+211 </td>
+</tr>
+<tr class="">
+<td>62</td>
+<td>
+<a name="62"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198106926788">Aeon</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,951
+</div>
+</td>
+<td>
+308 </td>
+</tr>
+<tr class="">
+<td>62</td>
+<td>
+<a name="62"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198247356798">Sea-Bass</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,951
+</div>
+</td>
+<td>
+892 </td>
+</tr>
+<tr class="">
+<td>65</td>
+<td>
+<a name="65"></a>
+ <a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198799226283">Chronic</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,950
+</div>
+</td>
+<td>
+257 </td>
+</tr>
+<tr class="">
+<td>65</td>
+<td>
+<a name="65"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198261574626">Dappur</a>
+<a href="/support">
+<img src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/2FD9premium.png" style="width:20px;margin-top: -3px;margin-left:3px;" alt="Premium User" title="Premium User" />
+</a>
+<a href="https://twitch.tv/dappur" class="btn btn-sm twitch"><i class="ion-social-twitch"></i></a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/United States.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,950
+</div>
+</td>
+<td>
+835 </td>
+</tr>
+<tr class="">
+<td>67</td>
+<td>
+<a name="67"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198308165845">ajay</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,948
+</div>
+</td>
+<td>
+583 </td>
+</tr>
+<tr class="">
+<td>68</td>
+<td>
+<a name="68"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198080342535">FreaKii.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+ <img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,947
+</div>
+</td>
+<td>
+362 </td>
+</tr>
+<tr class="">
+<td>69</td>
+<td>
+<a name="69"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198236145850">Rix_Ronday</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,946
+</div>
+</td>
+<td>
+296 </td>
+</tr>
+<tr class="">
+<td>69</td>
+<td>
+<a name="69"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198303347154">Melo$hisu</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/France.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,946
+</div>
+</td>
+<td>
+742 </td>
+</tr>
+<tr class="">
+<td>71</td>
+<td>
+<a name="71"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198394192197">yeet</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,944
+</div>
+</td>
+<td>
+364 </td>
+</tr>
+<tr class="">
+<td>72</td>
+<td>
+<a name="72"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198174027955">Ahmad.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,943
+</div>
+</td>
+<td>
+369 </td>
+</tr>
+<tr class="">
+<td>73</td>
+<td>
+<a name="73"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198080528613">Metsanauris</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,941
+</div>
+</td>
+<td>
+602 </td>
+</tr>
+<tr class="">
+<td>73</td>
+<td>
+<a name="73"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198327413177">Omar</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,941
+</div>
+</td>
+<td>
+517 </td>
+</tr>
+<tr class="">
+<td>73</td>
+<td>
+<a name="73"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198846625983">ThO.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,941
+</div>
+</td>
+<td>
+202 </td>
+</tr>
+<tr class="">
+<td>76</td>
+<td>
+<a name="76"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198127667738">Twitch | Pers&#195;&#169;ides</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/France.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,940
+</div>
+</td>
+<td>
+773 </td>
+</tr>
+<tr class="">
+<td>76</td>
+<td>
+<a name="76"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198323139029">Oscillon</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,940
+</div>
+</td>
+<td>
+640 </td>
+</tr>
+<tr class="">
+<td>78</td>
+<td>
+<a name="78"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198286121537">Ali.</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,937
+</div>
+</td>
+<td>
+595 </td>
+</tr>
+<tr class="">
+<td>79</td>
+<td>
+<a name="79"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198799696947">Ayell03</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,936
+</div>
+</td>
+<td>
+781 </td>
+</tr>
+<tr class="">
+<td>79</td>
+<td>
+<a name="79"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198008942341">Gnagflow06</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+ <img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/Germany.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,936
+</div>
+</td>
+<td>
+600 </td>
+</tr>
+<tr class="">
+<td>81</td>
+<td>
+<a name="81"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198185775263">Neqzo</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/France.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,933
+</div>
+</td>
+<td>
+365 </td>
+</tr>
+<tr class="">
+<td>81</td>
+<td>
+<a name="81"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198096205036">TheCar</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+<img class="emblem load-image pull-right hidden-xs flag" data-src="/images/flags/United States.png" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,933
+</div>
+</td>
+<td>
+306 </td>
+</tr>
+<tr class="">
+<td>83</td>
+<td>
+<a name="83"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198092029222">Normal Times</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,930
+</div>
+</td>
+<td>
+518 </td>
+</tr>
+<tr class="">
+<td>83</td>
+<td>
+ <a name="83"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198088264123">outlast (LIVE)</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,930
+</div>
+</td>
+<td>
+210 </td>
+</tr>
+<tr class="">
+<td>85</td>
+<td>
+<a name="85"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198083126856">PJ LFT</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,929
+</div>
+</td>
+<td>
+1264 </td>
+</tr>
+<tr class="">
+<td>85</td>
+<td>
+<a name="85"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198164712577">Happy New Scruff!</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,929
+</div>
+</td>
+<td>
+163 </td>
+</tr>
+<tr class="">
+<td>87</td>
+<td>
+<a name="87"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198421981724">noly</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,927
+</div>
+</td>
+<td>
+1023 </td>
+</tr>
+<tr class="">
+<td>87</td>
+<td>
+<a name="87"></a>
+ <a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198349786030">Rico</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,927
+</div>
+</td>
+<td>
+268 </td>
+</tr>
+<tr class="">
+<td>89</td>
+<td>
+<a name="89"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198286759507">?? Squishy</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,926
+</div>
+</td>
+<td>
+565 </td>
+</tr>
+<tr class="">
+<td>89</td>
+<td>
+<a name="89"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198326454615">KurizMa</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,926
+</div>
+</td>
+<td>
+547 </td>
+</tr>
+<tr class="">
+<td>89</td>
+<td>
+<a name="89"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198309249467">t.tv/rapidrl</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,926
+</div>
+</td>
+<td>
+803 </td>
+</tr>
+<tr class="">
+<td>89</td>
+<td>
+<a name="89"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198293785594">Chicago</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,926
+</div>
+</td>
+<td>
+374 </td>
+</tr>
+<tr class="">
+<td>93</td>
+<td>
+<a name="93"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198297599223">Dwen</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,924
+</div>
+</td>
+<td>
+491 </td>
+</tr>
+<tr class="">
+<td>94</td>
+<td>
+<a name="94"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198113055116">Gerry Goorlap</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,923
+</div>
+</td>
+<td>
+1053 </td>
+</tr>
+<tr class="">
+<td>95</td>
+<td>
+<a name="95"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198136523266">GarrettG</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,921
+</div>
+</td>
+<td>
+345 </td>
+</tr>
+<tr class="">
+<td>95</td>
+<td>
+<a name="95"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198411090295">Shadow. &#227;ƒ„</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,921
+</div>
+</td>
+<td>
+384 </td>
+</tr>
+<tr class="">
+<td>97</td>
+<td>
+<a name="97"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198043788652">Moses</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,920
+</div>
+</td>
+<td>
+875 </td>
+</tr>
+<tr class="">
+<td>98</td>
+<td>
+<a name="98"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198421850410">Dark</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,919
+</div>
+</td>
+<td>
+1180 </td>
+</tr>
+<tr class="">
+<td>98</td>
+<td>
+<a name="98"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198219259227">Wonder</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,919
+</div>
+</td>
+<td>
+564 </td>
+</tr>
+<tr class="">
+<td>100</td>
+<td>
+<a name="100"></a>
+<a data-tooltip="notooltip" style="color:#2a9fd6;" href="/profile/steam/76561198247922306">ClayX</a>
+<i class="emblem pull-right hidden-xs ion-steam" />
+</td>
+<td>
+<div class="pull-right">
+<img src="/Images/RL/ranked/s4-19.png" style="width: 25px;" />
+1,917
+</div>
+</td>
+<td>
+192 </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var page = 1;
+        var hash = '';
+
+
+        //Change Events
+        $('#Playlist,#Platform,.filter').change(function () {
+            go();
+        });
+
+        function go() {
+            var url = '/ranked-leaderboards/' + $('#Platform').val() + '/' + $('#Playlist').val() + '?page=' + page;
+
+            if ($('#Country').size() > 0) {
+                if ($('#Country').val() != 'Select Country') {
+                    url += '&country=' + $('#Country').val();
+                }
+                if ($('#State').val() != 'Select State') {
+                    url += '&state=' + $('#State').val();
+                }
+                if ($('#City').val() != 'Select City') {
+                    url += '&city=' + $('#City').val();
+                }
+            }
+
+
+            if (hash != null && hash != '')
+                url += '#' + hash;
+
+            window.location.href = url;
+        }
+
+        $('#next-page').click(function () {
+            page++;
+
+            go();
+
+            return false;
+        });
+        $('#prev-page').click(function () {
+            page--;
+
+            go();
+
+            return false;
+        });
+
+        $('#my-rank').click(function() {
+            var $this = $(this);
+
+            var rank = $this.data('rank');
+            page = Math.ceil(rank / 100);
+            hash = rank;
+
+            go();
+            return false;
+
+        });
+
+    });
+</script>
+</div>
+<div class="row">
+<div class="col-xs-12" style="margin-top: 20px; margin-bottom: 10px;text-align:center;">
+<script src="//tags-cdn.deployads.com/a/rocketleague.tracker.network.js" async></script>
+<script>
+                    if (window.device == 'mobile') {
+                        document.write('<div class="ad-tag" data-ad-name="RL-Footer BTF 300x250" data-ad-size="300x250" ></div>');
+                    }
+                    else {
+                        document.write('<div class="ad-tag" data-ad-name="RL-Footer BTF 729x90" data-ad-size="728x90" ></div>');
+                    }
+                    (deployads = window.deployads || []).push({});
+                    </script>
+</div>
+</div>
+</div>
+<div class="container">
+<footer class="site-footer">
+<div class="footer-box-container">
+<div class="footer-box">
+<span class="subtitle">Tracker Network</span>
+<ul>
+<li><a href="http://destinytracker.com">Destiny Tracker</a></li>
+<li><a href="http://overwatchtracker.com">Overwatch Tracker</a></li>
+<li><a href="http://battlefieldtracker.com">Battlefield Tracker</a></li>
+<li><a href="http://halotracker.com">Halo Tracker</a></li>
+<li><a href="http://rocketleague.tracker.network">Rocket League Tracker</a></li>
+<li><a href="http://divisiontracker.com">The Division Tracker</a></li>
+<li><a href="http://csgo.tracker.network">CS:GO Tracker</a></li>
+<li><a href="http://fhtracker.com">For Honor Tracker</a></li>
+<li><a href="http://pubgtracker.com">PUBG Tracker</a></li>
+<li><a href="http://r6.tracker.network">Rainbow 6 Siege Tracker</a></li>
+<li><a href="http://fortnitetracker.com">Fortnite Tracker</a></li>
+<li><a href="http://realmtracker.com">Realm Royale Tracker</a></li>
+<li><a href="http://cod.tracker.gg">Call of Duty Tracker</a></li>
+</ul>
+</div>
+<div class="footer-box">
+<span class="subtitle">Contact Us</span>
+<ul>
+<li><a href="/forum/5/site-bugs-requests"><i class="ion-bug"></i> Report a Bug</a></li>
+<li><a href="/Contact"><i class="ion-email"></i> Contact Staff</a></li>
+<li><a href="/Contact"><i class="ion-quote"></i> Advertise</a></li>
+</ul>
+</div>
+<div class="footer-box">
+<span class="subtitle">Social</span>
+<ul>
+<li><a href="https://twitter.com/trackernetwork"><i class="ion-social-twitter"></i> Twitter</a></li>
+<li><a href="https://facebook.com/trackernetwork"><i class="ion-social-facebook"></i> Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="row bottom-bit">
+<div class="col-xs-12 col-sm-8">
+&copy; 2019 Rocket League Tracker. Rocket League is a registered trademark of Psyonix.
+Rocket League Tracker is an unofficial fan site. We are not affiliated with Psyonix. Psyonix owns everything Rocket League related.
+</div>
+<div class="col-xs-12 col-sm-4" style="text-align: right;"><a href="https://thetrackernetwork.com/home/privacypolicy">Privacy Policy</a> | <a href="https://thetrackernetwork.com/home/tos">Terms of Service</a></div>
+</div>
+</footer>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/Scripts/bootstrap3-typeahead.js"></script>
+<script src="/bundles/bootstrap?v=0uCGxEfk2FmNXGJEf93ChNF3lLKAyJPuRFRyGx3XstA1"></script>
+<script type="text/javascript" src="/Content/DTR.js?636822557311498222"></script>
+<script type="text/javascript" src="/Scripts/recentplayers.js?v=2"></script>
+<input id="ControllerName" name="ControllerName" type="hidden" value="Stats" />
+<input id="ActionName" name="ActionName" type="hidden" value="RankedLeaderboards" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.3.0/js/iziToast.min.js"></script>
+<script type="text/javascript">
+    var notifs = [];
+    var added = 0;
+
+    siteNotificationKeys = [];
+    function checkSiteNotifications() {
+        if (typeof (iziToast) === undefined) {
+            return;
+        }
+
+        fetch('//notifications.thetrackernetwork.com/api/notifications/?site=RL&userName=2601:200:4300:fe0b:5054:ff:fece:1baa')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (json) {
+                json.forEach(function (item, index) {
+                    if (siteNotificationKeys.length > 5 || siteNotificationKeys.indexOf(item.RowKey) != -1) {
+                        return;
+                    }
+
+                    iziToast.show({
+                        title: item.title,
+                        message: item.body,
+                        class: 'trn-izitoast',
+                        closeOnClick: false,
+                        drag: false,
+                        theme: 'dark',
+                        position: 'topRight',
+                        animateInside: false,
+                        layout: 2,
+                        progressBar: false,
+                        timeout: false,
+                        onClosed: function () {
+                            fetch('//notifications.thetrackernetwork.com//api/notifications', {
+                                method: 'DELETE',
+                                headers: {
+                                    'Accept': 'application/json',
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    site: 'RL',
+                                    userName: '2601:200:4300:fe0b:5054:ff:fece:1baa',
+                                    id: item.RowKey,
+                                    type: item.type
+                                })
+                            });
+                        }
+                    });
+
+                    siteNotificationKeys.push(item.RowKey);
+                });
+            });
+    }
+    checkSiteNotifications();
+    setInterval(checkSiteNotifications, 90000);
+</script>
+<script src="/Scripts/blockadblock.js"></script>
+<script type="text/javascript">
+
+            function adBlockNotDetected() {
+                $('#top-supportsite').hide();
+            }
+            function adBlockDetected() {
+                $('#top-supportsite').show();
+
+
+                var html = '<div style="width: 100%; margin-top:5px;margin-bottom:10px;font-weight: normal;text-transform: none;"><div><div style="width: 100%; text-align: center;"><i class="fa fa-smile-o fa-2x" style="margin-top: 6px;"></i><div style="margin: 0px auto; width: 80%; color:#3f69d7; margin-top: 10px; margin-bottom:10px; font-size: 10pt; line-height: 1.5em;">Please consider adding Rocket League Tracker to your adblock whitelist! Our ads support the development and hardware costs of running this site. Really hate ads? Become a  <a href="/supporter">premium user</a> to load the site without ads (and other benefits!)</div></div><div style="clear: both;"></div></div></div>';
+                $('.please-support').html(html);
+            }
+
+            if (typeof PleaseSupportSite === 'undefined') {
+                adBlockDetected();
+            } else {
+                PleaseSupportSite.onDetected(adBlockDetected);
+                PleaseSupportSite.onNotDetected(adBlockNotDetected);
+            }
+        </script>
+</body>
+</html>

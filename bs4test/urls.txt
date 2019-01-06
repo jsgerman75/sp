@@ -1,0 +1,22 @@
+unranked
+https://rocketleague.tracker.network/ranked-leaderboards/all/0?page=1&country=
+
+unranked
+https://rocketleague.tracker.network/ranked-leaderboards/all/0?page=1
+
+1vs1
+https://rocketleague.tracker.network/ranked-leaderboards/all/10?page=1
+
+2vs2
+
+https://rocketleague.tracker.network/ranked-leaderboards/all/11?page=1
+
+3vs3 solo
+https://rocketleague.tracker.network/ranked-leaderboards/all/12?page=1
+
+3vs3 std
+https://rocketleague.tracker.network/ranked-leaderboards/all/13?page=1
+
+steam pattern
+https://rocketleague.tracker.network/profile/steam/76561197968381014
+https://rocketleague.tracker.network/profile/steam/axiomatic
