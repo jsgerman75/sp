@@ -3,65 +3,82 @@
 
 {% block content %}
    <h1>Player Stats Page.</h1>
-
-   <div class="divTable">
-      <div class="divTableBody">
-      <div class="divTableRow">
-      <div class="divTableCell">Goal/Shot%</div>
-      <div class="divTableCell">Wins</div>
-      <div class="divTableCell">Goals</div>
-      <div class="divTableCell">Saves</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">&nbsp;</div>
-      <div class="divTableCell">&nbsp;</div>
-      <div class="divTableCell">&nbsp;</div>
-      <div class="divTableCell">&nbsp;</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">Shots</div>
-      <div class="divTableCell">MVPS</div>
-      <div class="divTableCell">Assists</div>
-      <div class="divTableCell">MVP/WIN%</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">&nbsp;</div>
-      <div class="divTableCell">&nbsp;</div>
-      <div class="divTableCell">&nbsp;</div>
-      <div class="divTableCell">&nbsp;</div>
-      </div>
-      </div>
+   <div>
+      <table class="pstats1">
+         <thead>
+         <tr>
+            <th>Goal/Shot%</th>
+            <th>Wins</th>
+            <th>Goals</th>
+            <th>Saves</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr>
+            <td>64.0</td>
+            <td>620</td>
+            <td>1332</td>
+            <td>875</td>
+         </tr>
+         </tbody>
+         </tr>
+      </table>
    </div>
 
-   <div class="divTable">
-      <div class="divTableBody">
-      <div class="divTableRow">
-      <div class="divTableCell">Playlist</div>
-      <div class="divTableCell">Rating</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">Unranked</div>
-      <div class="divTableCell">&nbsp;</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">1vs1 Duel</div>
-      <div class="divTableCell">&nbsp;</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">2vs2 Teams</div>
-      <div class="divTableCell">&nbsp;</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">3vs3 Solo</div>
-      <div class="divTableCell">&nbsp;</div>
-      </div>
-      <div class="divTableRow">
-      <div class="divTableCell">3vs3 Standard</div>
-      <div class="divTableCell">&nbsp;</div>
-      </div>
-      </div>
-      </div>
-   
+   <div>
+      <table class="pstats2">
+         <thead>
+         <tr>
+            <th>Shots</th>
+            <th>MVPS</th>
+            <th>Assists</th>
+            <th>MVP/WIN%</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr>
+            <td>2082</td>
+            <td>170</td>
+            <td>358</td>
+            <td>27.4</td>
+         </tr>
+         </tbody>
+         </tr>
+      </table>
+   </div>
+
+   <div>
+      <table class="pstats3">
+         <thead>
+         <tr>
+         <th>Playlist</th>
+         <th>Rating</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr>
+         <td>Unranked</td>
+         <td>474</td>
+         </tr>
+         <tr>
+         <td>1vs1 Duel</td>
+         <td>156</td>
+         </tr>
+         <tr>
+         <td>2vs2 Duel</td>
+         <td>440</td>
+         </tr>
+         <tr>
+         <td>3vs3 Solo</td>
+         <td>122</td>
+         </tr>
+         <tr>
+         <td>3vs3 Standard</td>
+         <td>605</td>
+         </tr>
+         </tbody>
+      </table>   
+   </div>
 </div>
 
 {% endblock content %}
